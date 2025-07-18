@@ -1,0 +1,39 @@
+/* style.css */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background-color: #f5f7fa;
+  color: #333;
+}
+header {
+  background-color: #2a7be4;
+  color: white;
+  text-align: center;
+  padding: 3em;
+}
+.btn {
+  background-color: white;
+  color: #2a7be4;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.features {
+  display: flex;
+  justify-content: space-around;
+  padding: 2em;
+}
+.features div {
+  background-color: white;
+  padding: 1.5em;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  width: 25%;
+}
+footer {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 1em;
+}
