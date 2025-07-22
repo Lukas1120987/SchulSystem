@@ -1,10 +1,106 @@
 [
   {
     "question": "Was ist das SchulSystem?",
-    "answer": "Das SchulSystem ist eine modulare Schulplattform ..."
+    "answer": "Das SchulSystem ist eine modulare digitale Plattform, die Schülern, Lehrern und Verwaltungspersonal hilft, den Schulalltag besser zu organisieren."
   },
   {
-    "question": "Braucht das SchulSystem Internet?",
-    "answer": "Nein, das SchulSystem funktioniert komplett offline. Die Speciherun"
+    "question": "Welche Module bietet das SchulSystem an?",
+    "answer": "Das SchulSystem enthält u.a. Module für Stundenplan, E-Learning, Dateiablage, Nachrichten, Cloud, Sprechstunden, ToDo-Listen, Adminbereich, Meldungen, Kalender, Support und Einstellungen."
+  },
+  {
+    "question": "Wie kann ich mich im SchulSystem anmelden?",
+    "answer": "Du kannst dich über die Login-Seite anmelden, indem du deinen Benutzernamen und dein Passwort eingibst."
+  },
+  {
+    "question": "Brauche ich Internet, um das SchulSystem zu nutzen?",
+    "answer": "Das SchulSystem kann lokal installiert und genutzt werden, benötigt aber für einige Module (z.B. Cloud, Nachrichten) eine Internetverbindung."
+  },
+  {
+    "question": "Wie ändere ich mein Passwort im SchulSystem?",
+    "answer": "Im Einstellungen-Modul findest du die Option, dein Passwort sicher zu ändern."
+  },
+  {
+    "question": "Kann ich meine Aufgaben im SchulSystem verwalten?",
+    "answer": "Ja, das ToDo-Modul bietet eine persönliche Aufgabenverwaltung, die dir hilft, den Überblick zu behalten."
+  },
+  {
+    "question": "Wie funktioniert das E-Learning im SchulSystem?",
+    "answer": "Im E-Learning-Modul kannst du Online-Tests absolvieren und dein Wissen direkt überprüfen."
+  },
+  {
+    "question": "Wie kann ich Dateien mit meiner Klasse teilen?",
+    "answer": "Die Dateiablage und die Cloud ermöglichen das sichere Teilen von Materialien mit Klassen oder einzelnen Nutzern."
+  },
+  {
+    "question": "Wer kann den Adminbereich im SchulSystem nutzen?",
+    "answer": "Der Adminbereich ist für Verwaltungspersonal vorgesehen und bietet umfangreiche Benutzer- und Gruppenverwaltung."
+  },
+  {
+    "question": "Wie kann ich Termine oder Sprechstunden buchen?",
+    "answer": "Über das Sprechstunden-Modul kannst du Termine mit Lehrern einfach und unkompliziert buchen."
+  },
+  {
+    "question": "Wie werden Änderungen im Stundenplan kommuniziert?",
+    "answer": "Das SchulSystem zeigt aktuelle Stunden- und Vertretungspläne an und informiert über Meldungen und Kalender."
+  },
+  {
+    "question": "Gibt es eine Unterstützung bei technischen Problemen?",
+    "answer": "Ja, das Support-Modul erlaubt das Erstellen von Tickets für Hilfe und Feedback."
+  },
+  {
+    "question": "Wie sicher sind meine Daten im SchulSystem?",
+    "answer": "Das SchulSystem legt großen Wert auf Datenschutz und verwendet sichere Speicherverfahren, um deine Daten zu schützen."
+  },
+  {
+    "question": "Kann ich das SchulSystem auf verschiedenen Geräten nutzen?",
+    "answer": "Ja, das SchulSystem ist plattformunabhängig und kann auf Computern, Tablets und Smartphones genutzt werden."
+  },
+  {
+    "question": "Wie werden Schulferien und Feiertage im Kalender angezeigt?",
+    "answer": "Der Kalender im SchulSystem zeigt übersichtlich alle Ferien, Feiertage und schulischen Veranstaltungen an."
+  },
+  {
+    "question": "Kann ich das SchulSystem an meine Schule anpassen?",
+    "answer": "Ja, viele Module lassen sich konfigurieren, damit das System optimal zu den Bedürfnissen deiner Schule passt."
+  },
+  {
+    "question": "Wie melde ich mich ab?",
+    "answer": "Du kannst dich über das Benutzerprofil oder eine Abmelde-Schaltfläche sicher aus dem SchulSystem ausloggen."
+  },
+  {
+    "question": "Ist das SchulSystem kostenlos?",
+    "answer": "Das SchulSystem wird als Open-Source-Projekt angeboten und kann kostenlos genutzt und angepasst werden."
+  },
+  {
+    "question": "Wie oft wird das SchulSystem aktualisiert?",
+    "answer": "Das SchulSystem erhält regelmäßige Updates, um neue Funktionen und Sicherheitsverbesserungen bereitzustellen."
+  },
+  {
+    "question": "Kann ich eigene Dateien in die Cloud hochladen?",
+    "answer": "Ja, das Cloud-Modul erlaubt das Hochladen und Teilen eigener Dateien mit bestimmten Gruppen oder einzelnen Nutzern."
+  },
+  {
+    "question": "Wie funktioniert die Benutzerverwaltung im SchulSystem?",
+    "answer": "Im Adminbereich können Benutzerkonten angelegt, geändert und Gruppen zugewiesen werden, um Rechte zu steuern."
+  },
+  {
+    "question": "Kann ich Benachrichtigungen im SchulSystem erhalten?",
+    "answer": "Ja, das Nachrichtenmodul ermöglicht den Empfang und Versand von schulinternen Nachrichten inklusive Suchfunktion."
+  },
+  {
+    "question": "Gibt es eine Möglichkeit, Feedback zu geben?",
+    "answer": "Über das Support- oder Einstellungsmodul kannst du Feedback, Fragen oder Probleme an das SchulSystem-Team senden."
+  },
+  {
+    "question": "Wie funktioniert das ToDo-Modul im SchulSystem?",
+    "answer": "Das ToDo-Modul hilft dir, deine Aufgaben und Termine zu organisieren und erinnert dich an wichtige Deadlines."
+  },
+  {
+    "question": "Kann ich mehrere Klassen im SchulSystem verwalten?",
+    "answer": "Ja, das System unterstützt die Verwaltung von mehreren Klassen und Gruppen, ideal für Schulen mit vielen Lerngruppen."
+  },
+  {
+    "question": "Wie werden Vertretungsstunden im Stundenplan angezeigt?",
+    "answer": "Vertretungen werden automatisch im Stundenplan markiert und aktualisiert, damit du stets informiert bist."
   }
 ]
