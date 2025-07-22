@@ -138,3 +138,55 @@ footer a {
     max-width: 90%;
   }
 }
+/* Einheitlicher Stil für Unterseiten */
+
+main section {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  box-shadow: 0 0 8px rgba(0,0,0,0.05);
+}
+
+main section h2 {
+  color: #2c3e50;
+  margin-top: 0;
+}
+
+main ul {
+  list-style: none;
+  padding: 0;
+}
+
+main ul li {
+  margin: 0.7rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+main ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #3498db;
+  font-weight: bold;
+}
+
+main ol {
+  padding-left: 1.5rem;
+  margin: 1rem 0;
+}
+
+main ol li {
+  margin-bottom: 0.5rem;
+}
+
+/* Links im Text */
+main a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+main a:hover {
+  text-decoration: underline;
+}
