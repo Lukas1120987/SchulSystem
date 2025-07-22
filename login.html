@@ -2,67 +2,20 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>FAQ – EduClass</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <header>
-    <h1>Häufige Fragen (FAQ)</h1>
-    <p>Antworten auf die häufigsten Fragen zu SchulSystem</p>
-    <a href="index.html" class="btn">Zurück zur Startseite</a>
+    <h1>FAQ</h1>
+    <p>Antworten aus <code>faq.json</code></p>
   </header>
 
-  <main>
-    <section class="faq">
-      <h2>💡 Allgemeines</h2>
-      <div class="faq-item">
-        <h3>Was ist EduClass?</h3>
-        <p>EduClass ist ein digitales Schulverwaltungssystem, das Stundenplan, Kommunikation, E-Learning, Verwaltung und mehr in einem lokalen System vereint.</p>
-      </div>
-
-      <div class="faq-item">
-        <h3>Wer kann das SchulSystem verwenden?</h3>
-        <p>EduClass ist für Lehrkräfte, Schüler:innen und die Schulverwaltung konzipiert. Die Benutzerrechte unterscheiden sich je nach Rolle.</p>
-      </div>
-    </section>
-
-    <section class="faq">
-      <h2>🔧 Technisches</h2>
-      <div class="faq-item">
-        <h3>Welche Systemvoraussetzungen gibt es?</h3>
-        <p>SchulSystem läuft auf Windows 10/11. Es ist keine Installation nötig – einfach entpacken und starten.</p>
-      </div>
-
-      <div class="faq-item">
-        <h3>Wo werden die Daten gespeichert?</h3>
-        <p>Alle Daten (z. B. Nutzer, Nachrichten, Dateien) werden lokal auf dem Rechner oder im Schulnetzwerk gespeichert.</p>
-      </div>
-
-      <div class="faq-item">
-        <h3>Benötigt EduClass eine Internetverbindung?</h3>
-        <p>Nein. EduClass ist vollständig offline nutzbar.</p>
-      </div>
-    </section>
-
-    <section class="faq">
-      <h2>🔐 Sicherheit</h2>
-      <div class="faq-item">
-        <h3>Wer kann auf meine Daten zugreifen?</h3>
-        <p>Zugriffsrechte werden durch die Benutzerrollen gesteuert. Admins können Benutzer verwalten und Rechte zuweisen.</p>
-      </div>
-
-      <div class="faq-item">
-        <h3>Gibt es Zwei-Faktor-Authentifizierung?</h3>
-        <p>Ja. Ab Version 2.3.0 ist 2FA über TOTP (z. B. Google Authenticator) möglich – aktivierbar im Einstellungsmodul.</p>
-      </div>
-    </section>
+  <main id="faq-container">
+    <p>Lade Fragen...</p>
   </main>
 
-  <footer>
-    <p>© 2025 SchulSystem – <a href="kontakt.html">Kontakt</a> · <a href="datenschutz.html">Datenschutz</a> · <a href="impressum.html">Impressum</a></p>
-  </footer>
-
+  <script src="script.js"></script>
 </body>
 </html>
