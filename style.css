@@ -220,3 +220,29 @@ main a:hover {
 .faq-item p {
   margin: 0;
 }
+.faq-item {
+  margin: 1rem 0;
+  border-left: 4px solid #3498db;
+  padding-left: 1rem;
+}
+
+.faq-question {
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  color: #2c3e50;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  font-weight: bold;
+}
+
+.faq-answer {
+  display: none;
+  margin-top: 0.5rem;
+  color: #555;
+}
+
+.faq-answer.visible {
+  display: block;
+}
