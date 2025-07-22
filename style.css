@@ -190,3 +190,33 @@ main a {
 main a:hover {
   text-decoration: underline;
 }
+/* FAQ-Stil */
+.faq {
+  background-color: white;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+}
+
+.faq h2 {
+  color: #2c3e50;
+  margin-top: 0;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 0.5rem;
+}
+
+.faq-item {
+  margin: 1.2rem 0;
+  padding-left: 1rem;
+  border-left: 4px solid #3498db;
+}
+
+.faq-item h3 {
+  margin: 0 0 0.3rem;
+  color: #34495e;
+}
+
+.faq-item p {
+  margin: 0;
+}
