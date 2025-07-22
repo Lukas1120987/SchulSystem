@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kontakt – SchulSystem</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -25,51 +25,14 @@
     </section>
 
     <section>
-      <h2>📝 Kontaktformular</h2>
-      <form id="kontaktForm" action="mailto:schulsystem.team@gmail.com" method="post" enctype="text/plain" onsubmit="return validateForm()">
-        <label for="name">Name:</label><br />
-        <input type="text" id="name" name="Name" placeholder="Dein Name" required /><br />
-
-        <label for="email">E-Mail:</label><br />
-        <input type="email" id="email" name="E-Mail" placeholder="deine@mail.de" required /><br />
-
-        <label for="betreff">Betreff:</label><br />
-        <input type="text" id="betreff" name="Betreff" placeholder="Worum geht es?" required /><br />
-
-        <label for="nachricht">Nachricht:</label><br />
-        <textarea id="nachricht" name="Nachricht" rows="5" placeholder="Deine Nachricht" required></textarea><br />
-
-        <button type="submit" class="btn">Absenden</button>
-      </form>
+      <h2>📝 Kontaktformular (in Vorbereitung)</h2>
+      <p>In Zukunft wird hier ein Formular bereitstehen, um uns direkt Nachrichten zu senden.</p>
     </section>
   </main>
 
   <footer>
     <p>© 2025 SchulSystem – <a href="kontakt.html">Kontakt</a> · <a href="datenschutz.html">Datenschutz</a> · <a href="impressum.html">Impressum</a></p>
   </footer>
-
-  <script>
-    function validateForm() {
-      const name = document.getElementById('name').value.trim();
-      const email = document.getElementById('email').value.trim();
-      const betreff = document.getElementById('betreff').value.trim();
-      const nachricht = document.getElementById('nachricht').value.trim();
-
-      if (!name || !email || !betreff || !nachricht) {
-        alert('Bitte fülle alle Felder aus.');
-        return false;
-      }
-
-      // E-Mail Validierung (einfach)
-      const emailPattern = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;
-      if (!emailPattern.test(email)) {
-        alert('Bitte gib eine gültige E-Mail-Adresse ein.');
-        return false;
-      }
-
-      return true;
-    }
-  </script>
 
 </body>
 </html>
