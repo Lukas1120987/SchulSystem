@@ -1,15 +1,107 @@
+/* === Basislayout === */
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* === Header === */
+header {
+  background: linear-gradient(135deg, #4a90e2, #0072ff);
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+header h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+header .btn {
+  background: white;
+  color: #0072ff;
+  padding: 10px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+header .btn:hover {
+  background: #e0e0e0;
+}
+
+/* === Feature-Bereich mit Auto-Scroll === */
 .features {
+  flex: 1;
+  max-height: 500px;
+  overflow-y: auto;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+  padding: 30px;
   justify-content: center;
+  scroll-behavior: smooth;
+  animation: scrollFeatures 25s linear infinite;
 }
 
+/* Auto-Scroll Effekt (vertikal) */
+@keyframes scrollFeatures {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-50%); }
+}
+
+/* === Einzelne Feature-Box === */
 .features article {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   flex: 1 1 300px;
-  background: #f9f9f9;
+  max-width: 350px;
+  transition: transform 0.2s;
+}
+
+.features article:hover {
+  transform: translateY(-5px);
+}
+
+/* === Footer === */
+footer {
+  background-color: #222;
+  color: white;
+  text-align: center;
   padding: 15px;
-  border-radius: 8px;
-  box-shadow: 0 0 5px #ccc;
-  max-width: 400px;
+  font-size: 0.9em;
+}
+
+footer a {
+  color: #66b3ff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* === Scrollbar Styling (optional) === */
+.features::-webkit-scrollbar {
+  width: 10px;
+}
+.features::-webkit-scrollbar-thumb {
+  background-color: #bbb;
+  border-radius: 5px;
+}
+.features::-webkit-scrollbar-track {
+  background-color: #eee;
 }
