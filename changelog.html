@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <title>Releases – SchulSystem</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>📦 SchulSystem – Releases</h1>
+    <a href="index.html" class="btn">Zurück zur Startseite</a>
+  </header>
+
+  <main id="releases-container">
+    <p>Lade Versionshinweise...</p>
+  </main>
+
+  <script>
+    fetch("https://api.github.com/repos/Lukas1120987/Schul-System/releases")
+      .then(res => res.json())
+      .then(data => {
+        const container = document.getElementById("releases-container");
+        container.innerHTML = ""; // leeren
+
+        data.forEach(release => {
+          const section = document.createElement("section");
+          section.classList.add("release");
+
+          section.innerHTML = `
+            <h2>${release.name} (${release.tag_name})</h2>
+            <p><strong>Veröffentlicht:</strong> ${new Date(release.published_at).toLocaleDateString()}</p>
+            <div class="changelog">${marked.parse(release.body || "*Kein Changelog verfügbar.*")}</div>
+            <p><a href="${release.html_url}" target="_blank">🔗 Auf GitHub anzeigen</a></p>
+          `;
+
+          container.appendChild(section);
+        });
+      })
+      .catch(err => {
+        document.getElementById("releases-container").innerHTML = "<p>Fehler beim Laden der Releases.</p>";
+        console.error(err);
+      });
+  </script>
+
+  <!-- Markdown-Parser -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</body>
+</html>
