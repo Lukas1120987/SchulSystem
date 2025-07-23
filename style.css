@@ -242,6 +242,20 @@ main a:hover {
   margin-top: 0.5rem;
   color: #555;
 }
+.release {
+  border: 1px solid #ccc;
+  padding: 1em;
+  margin-bottom: 1.5em;
+  border-radius: 6px;
+  background-color: #f9f9f9;
+}
+.release h2 {
+  margin-top: 0;
+}
+.release .changelog {
+  margin-top: 1em;
+}
+
 
 .faq-answer.visible {
   display: block;
