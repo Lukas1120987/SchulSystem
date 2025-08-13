@@ -98,5 +98,53 @@
     <p>© 2025 SchulSystem – <a href="kontakt.html">Kontakt</a> · <a href="datenschutz.html">Datenschutz</a> · <a href="impressum.html">Impressum</a></p>
   </footer>
 
+<!-- Discord-Banner -->
+<div id="discord-banner" style="
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #5865F2; /* Discord-Blau */
+    color: white;
+    padding: 10px;
+    text-align: center;
+    z-index: 1000;
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
+">
+    <img src="/images/discord.png" alt="Discord" style="height:30px;">
+    <span>Trete unserem Discord-Server bei!</span>
+    <a href="https://discord.gg/deinlink" target="_blank" style="
+        margin-left: 10px;
+        padding: 5px 12px;
+        background-color: white;
+        color: #5865F2;
+        font-weight: bold;
+        text-decoration: none;
+        border-radius: 5px;
+        cursor: pointer;
+    ">Discord Beitreten</a>
+    <button id="close-discord-banner" style="
+        margin-left: 10px;
+        background: transparent;
+        border: none;
+        color: white;
+        font-size: 18px;
+        cursor: pointer;
+    ">&times;</button>
+</div>
+
+<script>
+    // Banner schließen
+    document.getElementById('close-discord-banner').onclick = function() {
+        document.getElementById('discord-banner').style.display = 'none';
+    }
+</script>
+
+  
 </body>
 </html>
