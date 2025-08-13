@@ -5,11 +5,61 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta property="og:title" content="SchulSystem – Die digitale Schaltzentrale für Schule und Unterricht" />
   <meta property="og:description" content="Verwalte Stundenpläne, Kommunikation, E-Learning, Dateien & mehr – alles in einem System." />
-<!-- <meta property="og:image" content="https://deine-domain.de/images/vorschau.png" /> -->
+  <!-- <meta property="og:image" content="https://deine-domain.de/images/vorschau.png" /> -->
   <meta property="og:url" content="https://lukas1120987.github.io/SchulSystem/" />
   <meta property="og:type" content="website" />
   <title>SchulSystem – Startseite</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Discord-Banner CSS */
+    #discord-banner {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: #5865F2; /* Discord-Blau */
+        color: white;
+        padding: 10px;
+        text-align: center;
+        z-index: 1000;
+        font-family: Arial, sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    #discord-banner.hidden {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    #discord-banner img {
+        height: 30px;
+    }
+
+    #discord-banner a {
+        margin-left: 10px;
+        padding: 5px 12px;
+        background-color: white;
+        color: #5865F2;
+        font-weight: bold;
+        text-decoration: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    #discord-banner button {
+        margin-left: 10px;
+        background: transparent;
+        border: none;
+        color: white;
+        font-size: 18px;
+        cursor: pointer;
+    }
+  </style>
 </head>
 <body>
 
@@ -37,9 +87,7 @@
         <article><h3>🧑‍🏫 Sprechstunden</h3><p>Terminbuchung leicht gemacht</p></article>
         <article><h3>✅ ToDo’s</h3><p>Deine persönliche Aufgabenverwaltung</p></article>
         <article><h3>🧑‍💼 Adminbereich</h3><p>Benutzer- und Gruppenverwaltung im Überblick</p></article>
-     <!--   <article><h3>📝 Meldungen</h3><p>Kurznachrichten mit Dateianhängen veröffentlichen</p></article> -->
         <article><h3>📆 Kalender</h3><p>Monats- und Wochenübersicht für alle Termine</p></article>
-      <!--  <article><h3>🆘 Support</h3><p>Ticketsystem für Hilfe & Feedback</p></article> -->
         <article><h3>⚙️ Einstellungen</h3><p>Profil anpassen, Passwort ändern, Feedback geben</p></article>
         <article><h3>Weitere Infos</h3><p><a href="guide.html" class="btn">Guide</a></p></article>
         <article><h3>Häufig gestellte Fragen</h3><p><a href="login.html" class="btn">FAQ</a></p></article>
@@ -98,53 +146,20 @@
     <p>© 2025 SchulSystem – <a href="kontakt.html">Kontakt</a> · <a href="datenschutz.html">Datenschutz</a> · <a href="impressum.html">Impressum</a></p>
   </footer>
 
-<!-- Discord-Banner -->
-<div id="discord-banner" style="
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #5865F2; /* Discord-Blau */
-    color: white;
-    padding: 10px;
-    text-align: center;
-    z-index: 1000;
-    font-family: Arial, sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
-">
-    <img src="/images/discord.png" alt="Discord" style="height:30px;">
-    <span>Trete unserem Discord-Server bei!</span>
-    <a href="https://discord.gg/deinlink" target="_blank" style="
-        margin-left: 10px;
-        padding: 5px 12px;
-        background-color: white;
-        color: #5865F2;
-        font-weight: bold;
-        text-decoration: none;
-        border-radius: 5px;
-        cursor: pointer;
-    ">Discord Beitreten</a>
-    <button id="close-discord-banner" style="
-        margin-left: 10px;
-        background: transparent;
-        border: none;
-        color: white;
-        font-size: 18px;
-        cursor: pointer;
-    ">&times;</button>
-</div>
+  <!-- Discord-Banner -->
+  <div id="discord-banner">
+      <img src="images/discord.png" alt="Discord">
+      <span>Trete unserem Discord-Server bei!</span>
+      <a href="https://discord.gg/deinlink" target="_blank">Discord Beitreten</a>
+      <button id="close-discord-banner">&times;</button>
+  </div>
 
-<script>
-    // Banner schließen
-    document.getElementById('close-discord-banner').onclick = function() {
-        document.getElementById('discord-banner').style.display = 'none';
-    }
-</script>
+  <script>
+      // Banner schließen
+      document.getElementById('close-discord-banner').onclick = function() {
+          document.getElementById('discord-banner').classList.add('hidden');
+      }
+  </script>
 
-  
 </body>
 </html>
