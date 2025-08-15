@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <title>Impressum – SchulSystem</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index,follow">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --fg: #1b1f24;
+      --muted: #5a6572;
+      --accent: #0a84ff;
+      --border: #e5e7eb;
+      --card: #f8fafc;
+      --maxw: 860px;
+      --radius: 12px;
+      --shadow: 0 1px 2px rgba(0,0,0,.06), 0 8px 24px rgba(0,0,0,.06);
+    }
+
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--fg);
+      font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    header {
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(180deg, #ffffff, #fafafa);
+    }
+    .wrap {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 24px 20px;
+    }
+    h1 {
+      margin: 0 0 6px;
+      font-size: 28px;
+      letter-spacing: .2px;
+    }
+    .subtitle {
+      color: var(--muted);
+      margin: 0;
+      font-size: 14px;
+    }
+
+    nav.toc {
+      margin: 20px 0 28px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 16px;
+    }
+    nav.toc strong { display: block; margin-bottom: 8px; }
+    nav.toc ul {
+      margin: 0;
+      padding-left: 18px;
+      columns: 2;
+      column-gap: 28px;
+    }
+    nav.toc li { margin: 4px 0; }
+    nav.toc a { color: var(--fg); text-decoration: none; border-bottom: 1px dotted var(--border); }
+    nav.toc a:hover { color: var(--accent); border-color: var(--accent); }
+
+    main { margin-bottom: 64px; }
+    section {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 22px;
+      margin: 16px 0;
+    }
+    section h2 {
+      margin-top: 0;
+      font-size: 22px;
+    }
+    p { margin: 10px 0; }
+    ul { margin: 8px 0 8px 20px; }
+    .note {
+      background: #f1f5f9;
+      border-left: 4px solid var(--accent);
+      padding: 12px 14px;
+      border-radius: 8px;
+      color: #0f172a;
+    }
+    footer {
+      border-top: 1px solid var(--border);
+      background: #fafafa;
+    }
+    footer .wrap { font-size: 14px; color: var(--muted); }
+
+    @media (max-width: 700px) {
+      nav.toc ul { columns: 1; }
+    }
+
+    @media print {
+      header, nav.toc, footer { display: none; }
+      body { background: #fff; }
+      section { box-shadow: none; page-break-inside: avoid; }
+      a { color: #000; text-decoration: underline; }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <h1>Impressum</h1>
+    <p class="subtitle">für die Website „SchulSystem“ – Stand: <span class="mono">[TT.MM.JJJJ]</span></p>
+  </div>
+</header>
+
+<div class="wrap">
+  <nav class="toc" aria-label="Inhaltsverzeichnis">
+    <strong>Inhaltsverzeichnis</strong>
+    <ul>
+      <li><a href="#angaben">1. Angaben gemäß § 5 TMG</a></li>
+      <li><a href="#kontakt">2. Kontakt</a></li>
+      <li><a href="#haftung-inhalte">3. Haftung für Inhalte</a></li>
+      <li><a href="#haftung-links">4. Haftung für Links</a></li>
+      <li><a href="#urheberrecht">5. Urheberrecht</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="angaben">
+      <h2>1. Angaben gemäß § 5 TMG</h2>
+      <p>
+        <strong>Lukas Seifert</strong><br>
+        Medebacher Weg 13
+        13507 Berlin<br>
+        Deutschland
+      </p>
+    </section>
+
+    <section id="kontakt">
+      <h2>2. Kontakt</h2>
+      <p>
+        E-Mail: <a href="mailto:team.schulsystem@outlook.com">team.schulsystem@outlook.com</a>
+      </p>
+    </section>
+
+    <section id="haftung-inhalte">
+      <h2>3. Haftung für Inhalte</h2>
+      <p>Als Diensteanbieter sind wir gemäß § 7 Abs. 1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich.  
+      Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.</p>
+      <p>Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich.  
+      Bei Bekanntwerden entsprechender Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.</p>
+    </section>
+
+    <section id="haftung-links">
+      <h2>4. Haftung für Links</h2>
+      <p>Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben.  
+      Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen.  
+      Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.  
+      Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar.</p>
+      <p>Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar.  
+      Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.</p>
+    </section>
+
+    <section id="urheberrecht">
+      <h2>5. Urheberrecht</h2>
+      <p>Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht.  
+      Beiträge Dritter sind als solche gekennzeichnet.  
+      Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.  
+      Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet.</p>
+    </section>
+  </main>
+</div>
+
+<footer>
+  <div class="wrap">
+    <p>&copy; <span class="mono">2012</span> <span class="mono">SchulSystem</span>. Alle Rechte vorbehalten.</p>
+  </div>
+</footer>
+</body>
+</html>
