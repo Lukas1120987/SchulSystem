@@ -63,6 +63,73 @@
 </head>
 <body>
 
+
+  <!-- Newsletter-Banner -->
+<div id="newsletter-banner">
+  <div id="newsletter-content">
+    <span id="close-banner">&times;</span>
+    <h3>📩 Melde dich für den EduClass Newsletter an!</h3>
+    <iframe 
+      data-w-type="embedded"
+      frameborder="0"
+      scrolling="no"
+      marginheight="0"
+      marginwidth="0"
+      src="https://s944x.mjt.lu/wgt/s944x/0l51/form?c=3aea62d8"
+      width="100%"
+      style="height: 300px; border: none;">
+    </iframe>
+    <script type="text/javascript" src="https://app.mailjet.com/pas-nc-embedded-v1.js"></script>
+  </div>
+</div>
+
+<style>
+  #newsletter-banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7); /* halbtransparent */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    z-index: 9999;
+  }
+  #newsletter-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px;
+    width: 100%;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  }
+  #newsletter-content h3 {
+    margin-top: 0;
+    font-family: sans-serif;
+  }
+  #close-banner {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #555;
+    cursor: pointer;
+  }
+  #close-banner:hover {
+    color: #000;
+  }
+</style>
+
+<script>
+  document.getElementById("close-banner").addEventListener("click", function() {
+    document.getElementById("newsletter-banner").style.display = "none";
+  });
+</script>
+
+  
   <header>
     <h1>SchulSystem</h1>
     <p>Die digitale Schaltzentrale für Schule, Schüler und Lehrer</p>
