@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback – SchulSystem</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f9fc;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    h1 {
+      margin: 1.5rem 0;
+      color: #333;
+    }
+    .feedback-slide {
+      display: none;
+      font-size: 1.2rem;
+      padding: 1.5rem;
+      margin: 1rem auto;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      max-width: 700px;
+    }
+    .author {
+      margin-top: 0.8rem;
+      font-size: 0.9rem;
+      color: #555;
+    }
+    #feedback-container {
+      min-height: 150px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Das sagen unsere Nutzer</h1>
+  <div id="feedback-container">Lade Feedback...</div>
+
+  <script>
+    async function loadFeedback() {
+      try {
+        const res = await fetch("https://api.github.com/repos/Lukas1120987/SchulSystem-feedback/issues");
+        const issues = await res.json();
+
+        // Nur Feedback mit Label "approved"
+        const approved = issues.filter(issue =>
+          issue.labels.some(l => l.name.toLowerCase() === "approved")
+        );
+
+        if (approved.length === 0) {
+          document.getElementById("feedback-container").innerHTML =
+            "<p>Noch kein freigegebenes Feedback vorhanden.</p>";
+          return;
+        }
+
+        // HTML für alle Slides
+        let html = "";
+        approved.forEach(issue => {
+          html += `
+            <div class="feedback-slide">
+              <div>"${issue.title}"</div>
+              <div class="author">– ${issue.user.login}</div>
+            </div>
+          `;
+        });
+        document.getElementById("feedback-container").innerHTML = html;
+
+        // Slideshow starten
+        let slideIndex = 0;
+        const slides = document.getElementsByClassName("feedback-slide");
+
+        function showSlides() {
+          for (let i = 0; i < slides.length; i++) slides[i].style.display = "none";
+          slideIndex++;
+          if (slideIndex > slides.length) slideIndex = 1;
+          slides[slideIndex - 1].style.display = "block";
+          setTimeout(showSlides, 4000); // alle 4 Sek
+        }
+        showSlides();
+      } catch (e) {
+        document.getElementById("feedback-container").innerHTML =
+          "<p>Fehler beim Laden des Feedbacks.</p>";
+        console.error(e);
+      }
+    }
+    loadFeedback();
+  </script>
+</body>
+</html>
