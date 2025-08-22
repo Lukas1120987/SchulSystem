@@ -3,253 +3,189 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta property="og:title" content="SchulSystem – Die digitale Schaltzentrale für Schule und Unterricht" />
-  <meta name="description" content="SchulSystem – die digitale Plattform für Schulen. Stundenpläne, Kommunikation, E-Learning, Cloud & mehr in einem modularen System.">
-  <meta property="og:description" content="Verwalte Stundenpläne, Kommunikation, E-Learning, Dateien & mehr – alles in einem System." />
-  <!-- <meta property="og:image" content="https://deine-domain.de/images/vorschau.png" /> -->
-  <meta property="og:url" content="https://lukas1120987.github.io/SchulSystem/" />
-  <meta property="og:type" content="website" />
+  <title>SchulSystem – Digitale Schaltzentrale für Schulen</title>
+  <meta name="description" content="SchulSystem: Die digitale Plattform für Schulen. Stundenpläne, Kommunikation, E-Learning & Dateien – alles modular und lokal nutzbar.">
+  <meta property="og:title" content="SchulSystem – Die digitale Schaltzentrale für Schule und Unterricht">
+  <meta property="og:description" content="Verwalte Stundenpläne, Kommunikation, E-Learning, Dateien & mehr – alles in einem System.">
+  <!-- <meta property="og:image" content="https://deine-domain.de/images/vorschau.png"> -->
+  <meta property="og:url" content="https://lukas1120987.github.io/SchulSystem/">
+  <meta property="og:type" content="website">
   <link rel="icon" href="bilder/Logo.ico" type="image/x-icon">
-
-  <title>SchulSystem – Startseite</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    /* Discord-Banner CSS */
-    #discord-banner {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        background-color: #5865F2; /* Discord-Blau */
-        color: white;
-        padding: 10px;
-        text-align: center;
-        z-index: 1000;
-        font-family: Arial, sans-serif;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-        box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
-        transition: transform 0.3s ease, opacity 0.3s ease;
-    }
-
-    #discord-banner.hidden {
-        transform: translateY(100%);
-        opacity: 0;
-    }
-
-    #discord-banner img {
-        height: 50px;
-    }
-
-    #discord-banner a {
-        margin-left: 10px;
-        padding: 5px 12px;
-        background-color: white;
-        color: #5865F2;
-        font-weight: bold;
-        text-decoration: none;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-
-    #discord-banner button {
-        margin-left: 10px;
-        background: transparent;
-        border: none;
-        color: white;
-        font-size: 18px;
-        cursor: pointer;
-    }
+    body { font-family: Arial, sans-serif; margin:0; padding:0; line-height:1.6; }
+    header, footer { background: #f5f5f5; padding: 20px; text-align: center; }
+    header h1 { margin-bottom: 5px; }
+    .btn { display:inline-block; padding:10px 20px; background:#5865F2; color:#fff; text-decoration:none; border-radius:5px; margin-top:10px; }
+    main { padding: 20px; max-width:1200px; margin: auto; }
+    section { margin-bottom:40px; }
+    .feature-grid { display:grid; grid-template-columns: repeat(auto-fit,minmax(250px,1fr)); gap:20px; }
+    .feature-grid article { background:#f0f0f0; padding:15px; border-radius:8px; text-align:center; }
+    .feature-grid h3 { margin-top:0; }
+    ul { list-style:none; padding:0; }
+    ul li { margin-bottom:10px; }
+    .gallery { display:flex; flex-wrap:wrap; gap:10px; justify-content:center; }
+    .gallery figure { margin:0; text-align:center; }
+    .gallery img { max-width:100%; height:auto; border-radius:5px; }
+    /* Newsletter & Discord */
+    #newsletter-banner, #discord-banner { position:fixed; width:100%; z-index:9999; display:flex; justify-content:center; align-items:center; transition: all 0.3s ease; }
+    #newsletter-banner { top:0; background: rgba(0,0,0,0.7); padding:20px; }
+    #newsletter-content { background:#fff; padding:20px; border-radius:8px; max-width:600px; width:100%; position:relative; box-shadow:0 4px 10px rgba(0,0,0,0.3);}
+    #close-banner, #close-discord-banner { position:absolute; top:10px; right:15px; background:none; border:none; font-size:22px; cursor:pointer; color:#555;}
+    #close-banner:hover, #close-discord-banner:hover { color:#000; }
+    #discord-banner { bottom:0; background:#5865F2; color:#fff; padding:10px; gap:10px; flex-wrap:wrap; box-shadow: 0 -2px 5px rgba(0,0,0,0.2);}
+    #discord-banner.hidden { transform: translateY(100%); opacity:0; }
+    #discord-banner img { height:50px; }
+    #discord-banner a { margin-left:10px; padding:5px 12px; background:#fff; color:#5865F2; font-weight:bold; border-radius:5px; text-decoration:none; }
   </style>
 </head>
 <body>
 
-
-  <!-- Newsletter-Banner -->
+<!-- Newsletter -->
 <div id="newsletter-banner">
   <div id="newsletter-content">
-    <span id="close-banner">&times;</span>
+    <button id="close-banner" aria-label="Newsletter schließen">&times;</button>
     <h3>📩 Melde dich für den SchulSystem Newsletter an!</h3>
-    <iframe 
-      data-w-type="embedded"
-      frameborder="0"
-      scrolling="no"
-      marginheight="0"
-      marginwidth="0"
+    <iframe data-w-type="embedded" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
       src="https://s944x.mjt.lu/wgt/s944x/0l51/form?c=3aea62d8"
-      width="100%"
-      style="height: 300px; border: none;">
-    </iframe>
-    <script type="text/javascript" src="https://app.mailjet.com/pas-nc-embedded-v1.js"></script>
+      width="100%" style="height:300px;border:none;"></iframe>
+    <script src="https://app.mailjet.com/pas-nc-embedded-v1.js"></script>
   </div>
 </div>
 
-<style>
-  #newsletter-banner {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.7); /* halbtransparent */
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 20px;
-    z-index: 9999;
-  }
-  #newsletter-content {
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    max-width: 600px;
-    width: 100%;
-    position: relative;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  }
-  #newsletter-content h3 {
-    margin-top: 0;
-    font-family: sans-serif;
-  }
-  #close-banner {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 22px;
-    font-weight: bold;
-    color: #555;
-    cursor: pointer;
-  }
-  #close-banner:hover {
-    color: #000;
-  }
-</style>
+<header>
+  <h1>SchulSystem</h1>
+  <p>Die digitale Schaltzentrale für Schule, Schüler und Lehrer</p>
+  <nav><a href="guide.html" class="btn">Jetzt starten</a> <a href="login.html" class="btn">FAQ</a></nav>
+</header>
+
+<main>
+
+  <section class="about">
+    <h2>Was ist das SchulSystem?</h2>
+    <p>SchulSystem ist die modulare Plattform für digitale Organisation, Kommunikation und Lernprozesse. Lehrer, Schüler und Verwaltung finden hier passende Werkzeuge.</p>
+  </section>
+
+  <section class="features">
+    <h2>Funktionen im Überblick</h2>
+    <div class="feature-grid">
+      <article><h3>📆 Stundenplan</h3><p>Immer den aktuellen Stunden- und Vertretungsplan im Blick</p></article>
+      <article><h3>🧪 E-Learning</h3><p>Teste dein Wissen online – direkt im SchulSystem</p></article>
+      <article><h3>📂 Dateiablage</h3><p>Materialien sicher mit der Klasse teilen</p></article>
+      <article><h3>💬 Nachrichten</h3><p>Schulinterne Kommunikation mit Suchfunktion</p></article>
+      <article><h3>☁️ Cloud</h3><p>Dateien mit Gruppen oder einzelnen Nutzern teilen</p></article>
+      <article><h3>🧑‍🏫 Sprechstunden</h3><p>Terminbuchung leicht gemacht</p></article>
+      <article><h3>✅ ToDo’s</h3><p>Deine persönliche Aufgabenverwaltung</p></article>
+      <article><h3>🧑‍💼 Adminbereich</h3><p>Benutzer- und Gruppenverwaltung im Überblick</p></article>
+      <article><h3>📆 Kalender</h3><p>Monats- und Wochenübersicht für alle Termine</p></article>
+      <article><h3>⚙️ Einstellungen</h3><p>Profil anpassen, Passwort ändern, Feedback geben</p></article>
+    </div>
+  </section>
+
+  <section class="zielgruppen">
+    <h2>Für wen ist das SchulSystem?</h2>
+    <ul>
+      <li>👩‍🏫 <strong>Lehrer:</strong> Klassenbücher, Stundenplan, Materialverteilung</li>
+      <li>🎓 <strong>Schüler:</strong> ToDo's, Lernplattform, Kommunikation</li>
+      <li>🏢 <strong>Verwaltung:</strong> Benutzerverwaltung, Vertretungsplan, Auswertungen</li>
+    </ul>
+  </section>
+
+  <section class="vorteile">
+    <h2>Warum SchulSystem?</h2>
+    <ul>
+      <li>🔒 Lokal nutzbar</li>
+      <li>🧱 Modular & individuell anpassbar</li>
+      <li>📱 Auch als portable Windows-App verfügbar</li>
+      <li>💡 Ideal für Schulen ohne digitale Komplettlösung</li>
+    </ul>
+  </section>
+
+  <section class="screenshots">
+    <h2>Ein Blick in das SchulSystem</h2>
+    <div class="gallery">
+      <figure>
+        <img src="screenshots/dashboard.png" alt="Dashboard" loading="lazy">
+        <figcaption>Dashboard Übersicht</figcaption>
+      </figure>
+      <figure>
+        <img src="screenshots/login.png" alt="Login-Fenster" loading="lazy">
+        <figcaption>Login-Fenster</figcaption>
+      </figure>
+      <figure>
+        <img src="screenshots/stundenplan.png" alt="Stundenplan" loading="lazy">
+        <figcaption>Stundenplan & Vertretungen</figcaption>
+      </figure>
+      <figure>
+        <img src="screenshots/nachrichten.png" alt="Nachrichtenmodul" loading="lazy">
+        <figcaption>Nachrichtenmodul</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="news">
+    <h2>Neuigkeiten</h2>
+    <p>SchulSystem 2.1 ist da! <a href="changelog.html">Mehr erfahren</a></p>
+  </section>
+
+  <section class="entwicklung">
+    <h2>Entwicklung</h2>
+    <p>Wir suchen dich, um das SchulSystem zu verbessern. <a href="entwickler.html">Mehr erfahren</a></p>
+  </section>
+
+  <section class="feedback">
+    <h2>Dein Feedback</h2>
+    <p>Wir freuen uns über Rückmeldungen, Ideen und Verbesserungsvorschläge!</p>
+    <script src="https://utteranc.es/client.js"
+            repo="Lukas1120987/SchulSystem-feedback"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+    </script>
+  </section>
+
+  <section class="download">
+    <a href="download.html" class="btn download-btn">Testversion herunterladen</a>
+  </section>
+
+  <section class="ueber">
+    <p>Das SchulSystem ist ein Projekt aus 2012, das nun wieder aufgenommen wurde, um Schulen digital zu unterstützen.</p>
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2025 SchulSystem – <a href="kontakt.html">Kontakt</a> · <a href="datenschutz.html">Datenschutz</a> · <a href="impressum.html">Impressum</a></p>
+</footer>
+
+<!-- Discord-Banner -->
+<div id="discord-banner">
+  <img src="images/discord.png" alt="Discord">
+  <span>Trete unserem Discord-Server bei! Dort erhälst du exklusive Vorteile.</span>
+  <a href="https://discord.gg/UVZ7UWEJBZ" target="_blank">Discord Beitreten</a>
+  <button id="close-discord-banner" aria-label="Discord-Banner schließen">&times;</button>
+</div>
 
 <script>
-  document.getElementById("close-banner").addEventListener("click", function() {
-    document.getElementById("newsletter-banner").style.display = "none";
+  // Newsletter schließen + localStorage
+  const newsletterBanner = document.getElementById("newsletter-banner");
+  const closeBannerBtn = document.getElementById("close-banner");
+  if(localStorage.getItem("newsletterClosed")) newsletterBanner.style.display = "none";
+  closeBannerBtn.addEventListener("click", () => {
+    newsletterBanner.style.display = "none";
+    localStorage.setItem("newsletterClosed", "true");
+  });
+
+  // Discord schließen + localStorage
+  const discordBanner = document.getElementById("discord-banner");
+  const closeDiscordBtn = document.getElementById("close-discord-banner");
+  if(localStorage.getItem("discordClosed")) discordBanner.classList.add("hidden");
+  closeDiscordBtn.addEventListener("click", () => {
+    discordBanner.classList.add("hidden");
+    localStorage.setItem("discordClosed", "true");
   });
 </script>
-
-  
-  <header>
-    <h1>SchulSystem</h1>
-    <p>Die digitale Schaltzentrale für Schule, Schüler und Lehrer</p>
-    <a href="login.html" class="btn">FAQ</a>
-  </header>
-
-  <main>
-
-    <section class="about">
-      <h2>Was ist das SchulSystem?</h2>
-      <p>Das SchulSystem ist die modulare Schulplattform für digitale Organisation, Kommunikation und Lernprozesse. Egal ob Lehrer, Schüler oder Verwaltung – hier findet jeder die passenden Werkzeuge.</p>
-    </section>
-
-    <section class="features">
-      <h2>Funktionen im Überblick</h2>
-      <div class="feature-grid">
-        <article><h3>📆 Stundenplan</h3><p>Immer den aktuellen Stunden- und Vertretungsplan im Blick</p></article>
-        <article><h3>🧪 E-Learning</h3><p>Teste dein Wissen online – direkt im SchulSystem</p></article>
-        <article><h3>📂 Dateiablage</h3><p>Materialien sicher mit der Klasse teilen</p></article>
-        <article><h3>💬 Nachrichten</h3><p>Schulinterne Kommunikation mit Suchfunktion</p></article>
-        <article><h3>☁️ Cloud</h3><p>Dateien mit Gruppen oder einzelnen Nutzern teilen</p></article>
-        <article><h3>🧑‍🏫 Sprechstunden</h3><p>Terminbuchung leicht gemacht</p></article>
-        <article><h3>✅ ToDo’s</h3><p>Deine persönliche Aufgabenverwaltung</p></article>
-        <article><h3>🧑‍💼 Adminbereich</h3><p>Benutzer- und Gruppenverwaltung im Überblick</p></article>
-        <article><h3>📆 Kalender</h3><p>Monats- und Wochenübersicht für alle Termine</p></article>
-        <article><h3>⚙️ Einstellungen</h3><p>Profil anpassen, Passwort ändern, Feedback geben</p></article>
-        <article><h3>Weitere Infos</h3><p><a href="guide.html" class="btn">Guide</a></p></article>
-        <article><h3>Häufig gestellte Fragen</h3><p><a href="login.html" class="btn">FAQ</a></p></article>
-      </div>
-    </section>
-
-    <section class="zielgruppen">
-      <h2>Für wen ist das SchulSystem?</h2>
-      <ul>
-        <li>👩‍🏫 <strong>Lehrer:</strong> Stundenpläne, Klassenbuch, Materialverteilung</li>
-        <li>🎓 <strong>Schüler:</strong> ToDo's, Lernplattform, Kommunikation</li>
-        <li>🏢 <strong>Verwaltung:</strong> Benutzerverwaltung, Vertretungsplan, Auswertungen</li>
-      </ul>
-    </section>
-
-    <section class="vorteile">
-      <h2>Warum SchulSystem?</h2>
-      <ul>
-        <li>🔒 Lokal nutzbar</li>
-        <li>🧱 Modular & individuell anpassbar</li>
-        <li>📱 Auch als portable Windows-App verfügbar</li>
-        <li>💡 Ideal für Schulen ohne digitale Komplettlösung</li>
-      </ul>
-    </section>
-
-    <section class="feedback">
-      <h2>Dein Feedback</h2>
-      <p>Wir freuen uns über Rückmeldungen, Ideen und Verbesserungsvorschläge zum SchulSystem!</p>
-      
-      <!-- Utterances Feedback-Widget -->
-      <script src="https://utteranc.es/client.js"
-              repo="Lukas1120987/SchulSystem-feedback"
-              issue-term="pathname"
-              theme="github-light"
-              crossorigin="anonymous"
-              async>
-      </script>
-    </section>
-    
-    <section class="screenshots">
-      <h2>Ein Blick in das SchulSystem</h2>
-      <div class="gallery">
-        <img src="screenshots/dashboard.png" alt="Dashboard">
-        <img src="screenshots/login.png" alt="Login-Fenster">
-        <img src="screenshots/stundenplan.png" alt="Stundenplan">
-        <img src="screenshots/nachrichten.png" alt="Nachrichtenmodul">
-      </div>
-    </section>
-
-    <section class="news">
-      <h2>Neuigkeiten</h2>
-      <p>SchulSystem 2.1 ist da!<a href="changelog.html">Mehr erfahren</a></p>
-    </section>
-
-    <section class="entwicklung">
-      <h2>Entwicklung</h2>
-      <p>Wir suchen dich, um das SchulSystem zu verbessern. <a href="entwickler.html">Mehr erfahren</a></p>
-    </section>
-
-    <section class="technik">
-      <h2>Technische Hinweise</h2>
-      <p>Das SchulSystem läuft lokal (Windows), benötigt keine Internetverbindung und speichert alle Daten nur auf dem Schulserver.</p>
-    </section>
-
-    <section class="download">
-      <a href="download.html" class="btn download-btn">Testversion herunterladen</a>
-    </section>
-
-    <section class="ueber">
-      <p>Das SchulSystem ist ein altes Projekt aus 2012, welches nun wieder aufgenommen wurde.</p>
-    </section>
-    
-  </main>
-
-  <footer>
-    <p>© 2025 SchulSystem – <a href="kontakt.html">Kontakt</a> · <a href="datenschutz.html">Datenschutz</a> · <a href="impressum.html">Impressum</a></p>
-  </footer>
-
-  <!-- Discord-Banner -->
-  <div id="discord-banner">
-      <img src="images/discord.png" alt="Discord">
-      <span>Trete unserem Discord-Server bei! Dort erhälst du exklusive Vorteile.</span>
-      <a href="https://discord.gg/UVZ7UWEJBZ" target="_blank">Discord Beitreten</a>
-      <button id="close-discord-banner">&times;</button>
-  </div>
-
-  <script>
-      // Banner schließen
-      document.getElementById('close-discord-banner').onclick = function() {
-          document.getElementById('discord-banner').classList.add('hidden');
-      }
-  </script>
 
 </body>
 </html>
