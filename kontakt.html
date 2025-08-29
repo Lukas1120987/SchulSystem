@@ -26,14 +26,35 @@
     </section>
 
     <section>
-      <h2>📝 Kontaktformular (in Vorbereitung)</h2>
-      <p>In Zukunft wird hier ein Formular bereitstehen, um uns direkt Nachrichten zu senden.</p>
+      <h2>📝 Kontaktformular</h2>
+      <p>Hier kannst du uns direkt eine Nachricht schreiben. Dein E-Mail-Programm öffnet sich automatisch:</p>
+
+      <form id="contactForm">
+        <label for="from">Deine E-Mail:</label><br>
+        <input type="email" id="from" name="from" required><br><br>
+
+        <label for="message">Deine Nachricht:</label><br>
+        <textarea id="message" name="message" rows="6" required></textarea><br><br>
+
+        <button type="submit">Absenden</button>
+      </form>
     </section>
   </main>
 
   <footer>
     
   </footer>
+
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      let from = document.getElementById("from").value;
+      let msg = document.getElementById("message").value;
+      let subject = "Kontaktformular";
+      let body = "Von: " + from + "%0D%0A%0D%0A" + msg;
+      window.location.href = "mailto:team.schulsystem@outlook.com?subject=" + encodeURIComponent(subject) + "&body=" + body;
+    });
+  </script>
 
 </body>
 </html>
