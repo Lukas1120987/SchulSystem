@@ -2,146 +2,149 @@
 <html lang="de">
 <head>
     <!-- Cookiebot -->
-  <script id="Cookiebot" 
-          src="https://consent.cookiebot.com/uc.js" 
-          data-cbid="e6171aea-b5ff-4803-a62d-1583a0a2bf7c" 
-          data-blockingmode="auto" 
-          type="text/javascript">
-  </script>
-  <!-- Ende Cookiebot -->
-  
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta property="og:title" content="SchulSystem – Die digitale Schaltzentrale für Schule und Unterricht" />
-  <meta name="description" content="SchulSystem – die digitale Plattform für Schulen. Stundenpläne, Kommunikation, E-Learning, Cloud & mehr in einem modularen System.">
-  <meta property="og:description" content="Verwalte Stundenpläne, Kommunikation, E-Learning, Dateien & mehr – alles in einem System." />
-  <!-- <meta property="og:image" content="https://deine-domain.de/images/vorschau.png" /> -->
-  <meta property="og:url" content="https://lukas1120987.github.io/SchulSystem/" />
-  <meta property="og:type" content="website" />
-  <link rel="icon" href="bilder/Logo.ico" type="image/x-icon">
+    <script id="Cookiebot" 
+            src="https://consent.cookiebot.com/uc.js" 
+            data-cbid="e6171aea-b5ff-4803-a62d-1583a0a2bf7c" 
+            data-blockingmode="auto" 
+            type="text/javascript">
+    </script>
+    <!-- Ende Cookiebot -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="SchulSystem – Die digitale Schaltzentrale für Schule und Unterricht" />
+    <meta name="description" content="SchulSystem – die digitale Plattform für Schulen. Stundenpläne, Kommunikation, E-Learning, Cloud & mehr in einem modularen System.">
+    <meta property="og:description" content="Verwalte Stundenpläne, Kommunikation, E-Learning, Dateien & mehr – alles in einem System." />
+    <meta property="og:url" content="https://lukas1120987.github.io/SchulSystem/" />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="bilder/Logo.ico" type="image/x-icon">
  
-  <title>SchulSystem – Startseite</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    /* Discord-Banner CSS */
-    #discord-banner {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        background-color: #5865F2; /* Discord-Blau */
-        color: white;
-        padding: 10px;
-        text-align: center;
-        z-index: 1000;
-        font-family: Arial, sans-serif;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-        box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
-        transition: transform 0.3s ease, opacity 0.3s ease;
-    }
+    <title>SchulSystem – Startseite</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      /* Discord-Banner CSS */
+      #discord-banner {
+          position: fixed;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          background-color: #5865F2;
+          color: white;
+          padding: 10px;
+          text-align: center;
+          z-index: 1000;
+          font-family: Arial, sans-serif;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 10px;
+          box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
+          transition: transform 0.3s ease, opacity 0.3s ease;
+      }
 
-    #discord-banner.hidden {
-        transform: translateY(100%);
-        opacity: 0;
-    }
+      #discord-banner.hidden {
+          transform: translateY(100%);
+          opacity: 0;
+      }
 
-    #discord-banner img {
-        height: 50px;
-    }
+      #discord-banner img {
+          height: 50px;
+      }
 
-    #discord-banner a {
-        margin-left: 10px;
-        padding: 5px 12px;
-        background-color: white;
-        color: #5865F2;
-        font-weight: bold;
-        text-decoration: none;
-        border-radius: 5px;
-        cursor: pointer;
-    }
+      #discord-banner a {
+          margin-left: 10px;
+          padding: 5px 12px;
+          background-color: white;
+          color: #5865F2;
+          font-weight: bold;
+          text-decoration: none;
+          border-radius: 5px;
+          cursor: pointer;
+      }
 
-    #discord-banner button {
-        margin-left: 10px;
-        background: transparent;
-        border: none;
-        color: white;
-        font-size: 18px;
-        cursor: pointer;
-    }
-  </style>
+      #discord-banner button {
+          margin-left: 10px;
+          background: transparent;
+          border: none;
+          color: white;
+          font-size: 18px;
+          cursor: pointer;
+      }
+    </style>
 </head>
 <body>
-
+  <!-- Cookiebot Banner (Pflicht für Anzeige) -->
+  <script id="CookieDeclaration" 
+          src="https://consent.cookiebot.com/e6171aea-b5ff-4803-a62d-1583a0a2bf7c/cd.js" 
+          type="text/javascript" 
+          async>
+  </script>
 
   <!-- Newsletter-Banner -->
-<div id="newsletter-banner">
-  <div id="newsletter-content">
-    <span id="close-banner">&times;</span>
-    <h3>📩 Melde dich für den SchulSystem Newsletter an!</h3>
-    <iframe 
-      data-w-type="embedded"
-      frameborder="0"
-      scrolling="no"
-      marginheight="0"
-      marginwidth="0"
-      src="https://s944x.mjt.lu/wgt/s944x/0l51/form?c=3aea62d8"
-      width="100%"
-      style="height: 300px; border: none;">
-    </iframe>
-    <script type="text/javascript" src="https://app.mailjet.com/pas-nc-embedded-v1.js"></script>
+  <div id="newsletter-banner">
+    <div id="newsletter-content">
+      <span id="close-banner">&times;</span>
+      <h3>📩 Melde dich für den SchulSystem Newsletter an!</h3>
+      <iframe 
+        data-w-type="embedded"
+        frameborder="0"
+        scrolling="no"
+        marginheight="0"
+        marginwidth="0"
+        src="https://s944x.mjt.lu/wgt/s944x/0l51/form?c=3aea62d8"
+        width="100%"
+        style="height: 300px; border: none;">
+      </iframe>
+      <script type="text/javascript" src="https://app.mailjet.com/pas-nc-embedded-v1.js"></script>
+    </div>
   </div>
-</div>
 
-<style>
-  #newsletter-banner {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.7); /* halbtransparent */
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 20px;
-    z-index: 9999;
-  }
-  #newsletter-content {
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    max-width: 600px;
-    width: 100%;
-    position: relative;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  }
-  #newsletter-content h3 {
-    margin-top: 0;
-    font-family: sans-serif;
-  }
-  #close-banner {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 22px;
-    font-weight: bold;
-    color: #555;
-    cursor: pointer;
-  }
-  #close-banner:hover {
-    color: #000;
-  }
-</style>
+  <style>
+    #newsletter-banner {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 20px;
+      z-index: 9999;
+    }
+    #newsletter-content {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 600px;
+      width: 100%;
+      position: relative;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+    #newsletter-content h3 {
+      margin-top: 0;
+      font-family: sans-serif;
+    }
+    #close-banner {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 22px;
+      font-weight: bold;
+      color: #555;
+      cursor: pointer;
+    }
+    #close-banner:hover {
+      color: #000;
+    }
+  </style>
 
-<script>
-  document.getElementById("close-banner").addEventListener("click", function() {
-    document.getElementById("newsletter-banner").style.display = "none";
-  });
-</script>
+  <script>
+    document.getElementById("close-banner").addEventListener("click", function() {
+      document.getElementById("newsletter-banner").style.display = "none";
+    });
+  </script>
 
-  
   <header>
     <h1>SchulSystem</h1>
     <p>Die digitale Schaltzentrale für Schule, Schüler und Lehrer</p>
@@ -149,7 +152,6 @@
   </header>
 
   <main>
-
     <section class="about">
       <h2>Was ist das SchulSystem?</h2>
       <p>Das SchulSystem ist die modulare Schulplattform für digitale Organisation, Kommunikation und Lernprozesse. Egal ob Lehrer, Schüler oder Verwaltung – hier findet jeder die passenden Werkzeuge.</p>
@@ -195,7 +197,6 @@
     <section class="feedback">
       <h2>Dein Feedback</h2>
       <p>Wir freuen uns über Rückmeldungen, Ideen und Verbesserungsvorschläge zum SchulSystem!</p>
-      
       <!-- Utterances Feedback-Widget -->
       <script src="https://utteranc.es/client.js"
               repo="Lukas1120987/SchulSystem-feedback"
@@ -241,7 +242,6 @@
     <section class="ueber">
       <p>Das SchulSystem ist ein altes Projekt aus 2012, welches nun wieder aufgenommen wurde.</p>
     </section>
-    
   </main>
 
   <footer>
@@ -257,11 +257,9 @@
   </div>
 
   <script>
-      // Banner schließen
       document.getElementById('close-discord-banner').onclick = function() {
           document.getElementById('discord-banner').classList.add('hidden');
       }
   </script>
-
 </body>
 </html>
