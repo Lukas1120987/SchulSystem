@@ -89,7 +89,7 @@
   },
   {
     "question": "Gibt es eine Möglichkeit, Feedback zu geben?",
-    "answer": "Über das Support- oder Einstellungsmodul kannst du Feedback, Fragen oder Probleme an das SchulSystem-Team senden."
+    "answer": "Über das Support- oder Einstellungsmodul kannst du Feedback, Fragen oder Probleme an deine Schule zu senden."
   },
   {
     "question": "Wie funktioniert das ToDo-Modul im SchulSystem?",
@@ -97,7 +97,7 @@
   },
   {
     "question": "Kann ich mehrere Klassen im SchulSystem verwalten?",
-    "answer": "Ja, das System unterstützt die Verwaltung von mehreren Klassen und Gruppen, ideal für Schulen mit vielen Lerngruppen."
+    "answer": "Ja, das System unterstützt die Verwaltung von mehreren Klassen und Gruppen, ideal für Schulen mit vielen Lerngruppen. Klassen entsprechen der 2. Gruppe."
   },
   {
     "question": "Wie werden Vertretungsstunden im Stundenplan angezeigt?",
